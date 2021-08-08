@@ -21,7 +21,7 @@ class ContentHeader extends Component {
 
   toggleEdit() {
     this.setState((prevState) => {
-      return { isEdit: !prevState.isEdit }
+      return { isEdit: !prevState.isEdit };
     });
   }
 
@@ -37,7 +37,7 @@ class ContentHeader extends Component {
               placeholder='Name'
             />
           : <p>
-              {value === '' ? 'Name' : value}
+              {value === '' ? 'John Doe' : value}
             </p>
         }
         <EditButton
