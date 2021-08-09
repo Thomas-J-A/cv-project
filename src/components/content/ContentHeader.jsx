@@ -10,7 +10,7 @@ class ContentHeader extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.toggleEdit = this.toggleEdit.bind(this);
+    this.toggleSubmitEdit = this.toggleSubmitEdit.bind(this);
   }
 
   handleChange(e) {
@@ -19,10 +19,10 @@ class ContentHeader extends Component {
     });
   }
 
-  toggleEdit() {
-    this.setState((prevState) => {
-      return { isEdit: !prevState.isEdit };
-    });
+  toggleSubmitEdit() {
+    this.setState((prevState) => ({
+      isEdit: !prevState.isEdit,
+    }));
   }
 
   render() {
@@ -42,7 +42,7 @@ class ContentHeader extends Component {
         }
         <EditButton
           isEdit={isEdit}
-          toggleEdit={this.toggleEdit}
+          toggleSubmitEdit={this.toggleSubmitEdit}
         />
       </header>
     );

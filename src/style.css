@@ -66,6 +66,10 @@ footer {
   background-color: chartreuse;
 }
 
+.content section textarea {
+  display: block;
+}
+
 /********** (Content) Aside **********/
 
 .content aside {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ContentHeader from './ContentHeader';
-import ContentSection from './ContentSection';
-import ContentAside from './ContentAside';
+import ContentHeader from './content/ContentHeader';
+import ContentSection from './content/ContentSection';
+import ContentAside from './content/ContentAside';
 
 class Main extends Component {
   render() {

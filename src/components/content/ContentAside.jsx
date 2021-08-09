@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PhoneNumber from './PhoneNumber';
 import Email from './Email';
 import EditButton from './EditButton';
-import profilePic from '../images/profile-pic.jpg';
+import profilePic from '../../images/profile-pic.jpg';
 
 class ContentAside extends Component {
   constructor(props) {
@@ -11,13 +11,13 @@ class ContentAside extends Component {
       isEdit: true,
     };
 
-    this.toggleEdit = this.toggleEdit.bind(this);
+    this.toggleSubmitEdit = this.toggleSubmitEdit.bind(this);
   }
 
-  toggleEdit() {
-    this.setState((prevState) => {
-      return { isEdit: !prevState.isEdit };
-    });
+  toggleSubmitEdit() {
+    this.setState((prevState) => ({
+      isEdit: !prevState.isEdit,
+    }));
   }
 
   render() {
@@ -29,7 +29,7 @@ class ContentAside extends Component {
         <Email isEdit={isEdit} />
         <EditButton 
           isEdit={isEdit}
-          toggleEdit={this.toggleEdit}
+          toggleSubmitEdit={this.toggleSubmitEdit}
         />
       </aside>
     );
