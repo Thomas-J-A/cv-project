@@ -6,7 +6,7 @@ class Description extends Component {
     super(props);
     this.state = {
       description: '',
-      isOpen: false,
+      isOpen: true,
       isEdit: true,
     };
 
@@ -50,7 +50,7 @@ class Description extends Component {
     }
 
     return (
-      <div>
+      <div id='description'>
         <span>Description</span>
         <i 
           className={isOpen ? 'fas fa-chevron-up' : 'fas fa-chevron-down'}

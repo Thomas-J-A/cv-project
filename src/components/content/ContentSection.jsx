@@ -4,11 +4,6 @@ import Education from './Education';
 import Experience from './Experience';
 
 class ContentSection extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {};
-  // }
-
   render() {
     return (
       <section>
