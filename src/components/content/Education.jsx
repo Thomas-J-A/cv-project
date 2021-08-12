@@ -62,7 +62,6 @@ class Education extends Component {
           ? { ...entry, isEdit: !entry.isEdit }
           : entry
       ));
-
       return {
         entries: updatedArr,
       };
@@ -97,7 +96,6 @@ class Education extends Component {
       const filteredArr = prevState.entries.filter((entry) => (
         entry.id !== e.target.parentNode.id ? true : false
       ));
-
       return {
         entries: filteredArr,
       };

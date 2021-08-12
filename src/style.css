@@ -66,11 +66,10 @@ footer {
   background-color: chartreuse;
 }
 
-#description textarea {
-  display: block;
-}
-
-#education input {
+#description textarea,
+#education input:not(input[type='date']),
+#experience input:not(input[type='date']), 
+#experience textarea {
   display: block;
 }
 

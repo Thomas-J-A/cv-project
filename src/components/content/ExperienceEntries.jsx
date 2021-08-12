@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class EducationEntries extends Component {
+class ExperienceEntries extends Component {
   render() {
     const { entries, handleChange, toggleSubmitEdit, removeEntry } = this.props;
     const listItems = entries.map((entry) => {
@@ -10,17 +10,23 @@ class EducationEntries extends Component {
           <li key={entry.id} id={entry.id}>
             <input
               type='text'
-              value={entry.titleOfStudy}
+              value={entry.position}
               onChange={handleChange}
-              placeholder='Title of Study'
-              className='title-of-study'
+              placeholder='Position'
+              className='position'
             />
-            <input
+            <input 
               type='text'
-              value={entry.placeOfStudy}
+              value={entry.company}
               onChange={handleChange}
-              placeholder='Place of Study'
-              className='place-of-study'
+              placeholder='Company'
+              className='company'
+            />
+            <textarea
+              value={entry.duties}
+              onChange={handleChange}
+              placeholder='Duties'
+              className='duties'
             />
             <label>
               Start:
@@ -49,10 +55,10 @@ class EducationEntries extends Component {
         return (
           <li key={entry.id} id={entry.id}>
             <p>
-              {entry.titleOfStudy === '' ? 'Web Development' : entry.titleOfStudy}
+              {entry.position === '' ? 'Junior Developer' : entry.position}
             </p>
             <p>
-              {entry.placeOfStudy === '' ? 'The Odin Project' : entry.placeOfStudy}
+              {entry.company === '' ? 'Facebook' : entry.company}
             </p>
             <p>
               {entry.startDate === '' ? 'Dec 2020' : entry.startDate}
@@ -68,11 +74,11 @@ class EducationEntries extends Component {
     });
 
     return (
-        <ul>
-          {listItems}
-        </ul>
+      <ul>
+        {listItems}
+      </ul>
     );
   }
 }
 
-export default EducationEntries;
+export default ExperienceEntries;
